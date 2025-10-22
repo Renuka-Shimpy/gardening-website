@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenBloom Nursery - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <!-- <img src="images/logo.png" alt="GreenBloom Nursery" class="logo"> -->
+                <span>GreenBloom</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="plants.html" class="nav-link">Plants</a></li>
+                <li class="nav-item"><a href="watering-schedule.html" class="nav-link">Watering Schedule</a></li>
+                <li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="darkModeToggle" class="theme-toggle">🌙</button>
+                <div class="cart-icon">
+                    <span id="cartCount">0</span>
+                    🛒
+                </div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Grow Your Garden Paradise</h1>
+            <p class="hero-subtitle">Discover the joy of gardening with our premium plants, expert advice, and quality tools</p>
+            <div class="hero-buttons">
+                <a href="plants.html" class="btn btn-primary">Explore Plants</a>
+                <a href="shop.html" class="btn btn-secondary">Shop Tools</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://picsum.photos/800/600?random=1" alt="Beautiful Garden" class="hero-img">
+        </div>
+    </section>
+
+    <!-- Featured Plants -->
+    <section class="featured-plants">
+        <div class="container">
+            <h2 class="section-title">Featured Plants</h2>
+            <div class="plants-grid" id="featuredPlants">
+                <!-- Plants will be loaded from JSON -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Why Choose GreenBloom?</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🌱</div>
+                    <h3>Quality Plants</h3>
+                    <p>Carefully selected and nurtured plants for your home and garden</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💧</div>
+                    <h3>Expert Care</h3>
+                    <p>Professional advice and tools to keep your plants thriving</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚚</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick and safe delivery to your doorstep</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Gardening Journey?</h2>
+                <p>Visit our nursery and get personalized advice from our experts</p>
+                <a href="contact.html" class="btn btn-primary">Visit Our Nursery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GreenBloom Nursery</h3>
+                    <p>Growing happiness, one plant at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="plants.html">Plants</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 info@greenbloom.com</p>
+                    <p>📞 9993787492</p>
+                    <p>📍 123 Garden St, Greenville</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GreenBloom Nursery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

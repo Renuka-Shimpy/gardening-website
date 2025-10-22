@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watering Schedule - GreenBloom Nursery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="GreenBloom Nursery" class="logo">
+                <span>GreenBloom</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="plants.html" class="nav-link">Plants</a></li>
+                <li class="nav-item"><a href="watering-schedule.html" class="nav-link active">Watering Schedule</a></li>
+                <li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="darkModeToggle" class="theme-toggle">🌙</button>
+                <div class="cart-icon">
+                    <span id="cartCount">0</span>
+                    🛒
+                </div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="watering-hero">
+        <div class="container">
+            <h1>Watering Schedule</h1>
+            <p>Keep your plants healthy with personalized reminders</p>
+        </div>
+    </section>
+
+    <section class="watering-content">
+        <div class="container">
+            <div class="watering-controls">
+                <button id="enableNotifications" class="btn btn-primary">Enable Watering Reminders</button>
+                <button id="clearGarden" class="btn btn-secondary">Clear My Garden</button>
+            </div>
+
+            <div class="schedule-section">
+                <h2>My Garden Schedule</h2>
+                <div id="scheduleTable" class="schedule-table">
+                    <!-- Schedule will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="upcoming-reminders">
+                <h2>Upcoming Reminders</h2>
+                <div id="upcomingReminders" class="reminders-list">
+                    <!-- Reminders will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="watering-tips">
+                <h2>Watering Tips</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <h3>💧 Check Soil Moisture</h3>
+                        <p>Always check the soil before watering. Stick your finger 1-2 inches into the soil - if it's dry, it's time to water.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h3>🌅 Morning Watering</h3>
+                        <p>Water your plants in the morning to reduce evaporation and prevent fungal diseases.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h3>🚰 Water Deeply</h3>
+                        <p>Water thoroughly until it runs out the drainage holes, then let the soil dry out before watering again.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GreenBloom Nursery</h3>
+                    <p>Growing happiness, one plant at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="plants.html">Plants</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 info@greenbloom.com</p>
+                    <p>📞 (555) 123-4567</p>
+                    <p>📍 123 Garden St, Greenville</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GreenBloom Nursery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/watering.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Rose",
+    "scientificName": "Rosa spp.",
+    "type": "Flowering Plant",
+    "wateringFrequency": "2-3 days",
+    "sunlight": "Full Sun",
+    "soil": "Loamy, well-draining",
+    "image": "https://picsum.photos/300/200?random=20",
+    "description": "Beautiful flowering shrubs known for their fragrant blooms and thorny stems."
+  },
+  {
+    "name": "Aloe Vera",
+    "scientificName": "Aloe barbadensis miller",
+    "type": "Succulent",
+    "wateringFrequency": "2-3 weeks",
+    "sunlight": "Bright, indirect light",
+    "soil": "Sandy, well-draining",
+    "image": "https://picsum.photos/300/200?random=21",
+    "description": "Medicinal succulent with thick, fleshy leaves that contain healing gel."
+  },
+  {
+    "name": "Snake Plant",
+    "scientificName": "Dracaena trifasciata",
+    "type": "Indoor Plant",
+    "wateringFrequency": "2-3 weeks",
+    "sunlight": "Low to bright indirect light",
+    "soil": "Well-draining potting mix",
+    "image": "https://picsum.photos/300/200?random=22",
+    "description": "Extremely hardy plant with upright, sword-like leaves that purify air."
+  },
+  {
+    "name": "Basil",
+    "scientificName": "Ocimum basilicum",
+    "type": "Herb",
+    "wateringFrequency": "2-3 days",
+    "sunlight": "Full Sun",
+    "soil": "Rich, moist, well-draining",
+    "image": "https://picsum.photos/300/200?random=23",
+    "description": "Aromatic herb perfect for cooking, with bright green leaves and strong flavor."
+  },
+  {
+    "name": "Tomato",
+    "scientificName": "Solanum lycopersicum",
+    "type": "Vegetable",
+    "wateringFrequency": "1-2 days",
+    "sunlight": "Full Sun",
+    "soil": "Rich, well-draining",
+    "image": "https://picsum.photos/300/200?random=24",
+    "description": "Popular garden vegetable that produces juicy, red fruits throughout summer."
+  },
+  {
+    "name": "Lavender",
+    "scientificName": "Lavandula spp.",
+    "type": "Flowering Plant",
+    "wateringFrequency": "1-2 weeks",
+    "sunlight": "Full Sun",
+    "soil": "Sandy, well-draining",
+    "image": "https://picsum.photos/300/200?random=25",
+    "description": "Fragrant herb with purple flowers, known for its calming scent and medicinal properties."
+  },
+  {
+    "name": "ZZ Plant",
+    "scientificName": "Zamioculcas zamiifolia",
+    "type": "Indoor Plant",
+    "wateringFrequency": "3-4 weeks",
+    "sunlight": "Low to bright indirect light",
+    "soil": "Well-draining potting mix",
+    "image": "https://picsum.photos/300/200?random=26",
+    "description": "Extremely low-maintenance plant with glossy, dark green leaves that thrive on neglect."
+  },
+  {
+    "name": "Cactus",
+    "scientificName": "Cactaceae family",
+    "type": "Succulent",
+    "wateringFrequency": "3-4 weeks",
+    "sunlight": "Full Sun to partial shade",
+    "soil": "Sandy, extremely well-draining",
+    "image": "https://picsum.photos/300/200?random=27",
+    "description": "Drought-tolerant plants with spines instead of leaves, perfect for dry conditions."
+  },
+  {
+    "name": "Mint",
+    "scientificName": "Mentha spp.",
+    "type": "Herb",
+    "wateringFrequency": "2-3 days",
+    "sunlight": "Partial to full sun",
+    "soil": "Moist, well-draining",
+    "image": "https://picsum.photos/300/200?random=28",
+    "description": "Fast-growing aromatic herb perfect for teas, cocktails, and culinary uses."
+  },
+  {
+    "name": "Peace Lily",
+    "scientificName": "Spathiphyllum wallisii",
+    "type": "Indoor Plant",
+    "wateringFrequency": "1 week",
+    "sunlight": "Low to medium indirect light",
+    "soil": "Moist, well-draining",
+    "image": "https://picsum.photos/300/200?random=29",
+    "description": "Beautiful flowering houseplant with dark green leaves and white blooms that purify air."
+  }
+]

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plants - GreenBloom Nursery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="GreenBloom Nursery" class="logo">
+                <span>GreenBloom</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="plants.html" class="nav-link active">Plants</a></li>
+                <li class="nav-item"><a href="watering-schedule.html" class="nav-link">Watering Schedule</a></li>
+                <li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="darkModeToggle" class="theme-toggle">🌙</button>
+                <div class="cart-icon">
+                    <span id="cartCount">0</span>
+                    🛒
+                </div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="plants-hero">
+        <div class="container">
+            <h1>Our Plant Collection</h1>
+            <p>Discover the perfect plants for your space</p>
+        </div>
+    </section>
+
+    <section class="plants-content">
+        <div class="container">
+            <div class="plants-controls">
+                <div class="search-bar">
+                    <input type="text" id="plantSearch" placeholder="Search plants...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Plants</button>
+                    <button class="filter-btn" data-filter="indoor">Indoor</button>
+                    <button class="filter-btn" data-filter="outdoor">Outdoor</button>
+                    <button class="filter-btn" data-filter="flowering">Flowering</button>
+                    <button class="filter-btn" data-filter="succulent">Succulents</button>
+                    <button class="filter-btn" data-filter="herbs">Herbs</button>
+                </div>
+            </div>
+
+            <div class="plants-grid" id="plantsGrid">
+                <!-- Plants will be loaded from JSON -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GreenBloom Nursery</h3>
+                    <p>Growing happiness, one plant at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="plants.html">Plants</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 info@greenbloom.com</p>
+                    <p>📞 (555) 123-4567</p>
+                    <p>📍 123 Garden St, Greenville</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GreenBloom Nursery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Plants page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load plants from JSON
+            fetch('data/plants.json')
+                .then(response => response.json())
+                .then(plants => {
+                    displayPlants(plants);
+                    setupFilters(plants);
+                });
+
+            function displayPlants(plants) {
+                const grid = document.getElementById('plantsGrid');
+                grid.innerHTML = '';
+
+                plants.forEach(plant => {
+                    const plantCard = document.createElement('div');
+                    plantCard.className = `plant-card ${plant.type.toLowerCase()}`;
+                    plantCard.innerHTML = `
+                        <img src="${plant.image}" alt="${plant.name}">
+                        <div class="plant-info">
+                            <h3>${plant.name}</h3>
+                            <p class="scientific-name">${plant.scientificName}</p>
+                            <div class="plant-details">
+                                <div class="detail">
+                                    <span class="label">💧 Water:</span>
+                                    <span>${plant.wateringFrequency}</span>
+                                </div>
+                                <div class="detail">
+                                    <span class="label">☀️ Light:</span>
+                                    <span>${plant.sunlight}</span>
+                                </div>
+                                <div class="detail">
+                                    <span class="label">🌱 Soil:</span>
+                                    <span>${plant.soil}</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary add-to-garden" data-plant='${JSON.stringify(plant)}'>
+                                Add to My Garden
+                            </button>
+                        </div>
+                    `;
+                    grid.appendChild(plantCard);
+                });
+
+                // Add to garden functionality
+                document.querySelectorAll('.add-to-garden').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const plant = JSON.parse(this.dataset.plant);
+                        addToGarden(plant);
+                        this.textContent = 'Added to Garden!';
+                        this.disabled = true;
+                        setTimeout(() => {
+                            this.textContent = 'Add to My Garden';
+                            this.disabled = false;
+                        }, 2000);
+                    });
+                });
+            }
+
+            function setupFilters(plants) {
+                const filterButtons = document.querySelectorAll('.filter-btn');
+                const searchInput = document.getElementById('plantSearch');
+
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        filterButtons.forEach(btn => btn.classList.remove('active'));
+                        this.classList.add('active');
+                        
+                        const filter = this.dataset.filter;
+                        const filteredPlants = filter === 'all' 
+                            ? plants 
+                            : plants.filter(plant => plant.type.toLowerCase().includes(filter));
+                        
+                        displayPlants(filteredPlants);
+                    });
+                });
+
+                searchInput.addEventListener('input', function() {
+                    const searchTerm = this.value.toLowerCase();
+                    const filteredPlants = plants.filter(plant => 
+                        plant.name.toLowerCase().includes(searchTerm) ||
+                        plant.scientificName.toLowerCase().includes(searchTerm)
+                    );
+                    displayPlants(filteredPlants);
+                });
+            }
+
+            function addToGarden(plant) {
+                let myGarden = JSON.parse(localStorage.getItem('myGarden') || '[]');
+                
+                // Check if plant already exists
+                if (!myGarden.some(p => p.name === plant.name)) {
+                    myGarden.push({
+                        ...plant,
+                        addedDate: new Date().toISOString(),
+                        nextWatering: calculateNextWatering(plant.wateringFrequency)
+                    });
+                    localStorage.setItem('myGarden', JSON.stringify(myGarden));
+                    showNotification(`${plant.name} added to your garden!`);
+                }
+            }
+
+            function calculateNextWatering(frequency) {
+                const days = parseInt(frequency);
+                const nextDate = new Date();
+                nextDate.setDate(nextDate.getDate() + days);
+                return nextDate.toISOString();
+            }
+
+            function showNotification(message) {
+                const notification = document.createElement('div');
+                notification.className = 'notification';
+                notification.textContent = message;
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.remove();
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - GreenBloom Nursery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="GreenBloom Nursery" class="logo">
+                <span>GreenBloom</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="plants.html" class="nav-link">Plants</a></li>
+                <li class="nav-item"><a href="watering-schedule.html" class="nav-link">Watering Schedule</a></li>
+                <li class="nav-item"><a href="shop.html" class="nav-link active">Shop</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="darkModeToggle" class="theme-toggle">🌙</button>
+                <div class="cart-icon">
+                    <span id="cartCount">0</span>
+                    🛒
+                </div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="shop-hero">
+        <div class="container">
+            <h1>Garden Shop</h1>
+            <p>Everything you need for your gardening journey</p>
+        </div>
+    </section>
+
+    <section class="shop-content">
+        <div class="container">
+            <div class="shop-controls">
+                <div class="category-filters">
+                    <button class="category-btn active" data-category="all">All Products</button>
+                    <button class="category-btn" data-category="tools">Tools</button>
+                    <button class="category-btn" data-category="pots">Pots</button>
+                    <button class="category-btn" data-category="soil">Soil & Fertilizer</button>
+                    <button class="category-btn" data-category="seeds">Seeds</button>
+                    <button class="category-btn" data-category="gloves">Gloves</button>
+                </div>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Shopping Cart</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="cartItems" class="cart-items">
+                    <!-- Cart items will be populated here -->
+                </div>
+                <div class="cart-total">
+                    <h3>Total: $<span id="cartTotal">0.00</span></h3>
+                </div>
+                <div class="cart-actions">
+                    <button id="checkoutBtn" class="btn btn-primary">Proceed to Checkout</button>
+                    <button id="clearCartBtn" class="btn btn-secondary">Clear Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GreenBloom Nursery</h3>
+                    <p>Growing happiness, one plant at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="plants.html">Plants</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 info@greenbloom.com</p>
+                    <p>📞 (555) 123-4567</p>
+                    <p>📍 123 Garden St, Greenville</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GreenBloom Nursery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/shop.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
